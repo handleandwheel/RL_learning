@@ -39,7 +39,7 @@ def get_policy(env: gym.Env, value_table, gamma):
 
 if __name__ == "__main__":
     env = gym.make("FrozenLake-v1")
-    obs = env.reset()
+    env.reset()
     value_table = value_iter(env)
     print(value_table)
     policy = get_policy(env, value_table, 1.0)
